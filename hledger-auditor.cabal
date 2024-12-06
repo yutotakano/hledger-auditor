@@ -1,0 +1,32 @@
+cabal-version:      3.4
+name:               hledger-auditor
+version:            0.0.1.0
+-- synopsis:
+-- description:
+license:            Apache-2.0
+license-file:       LICENSE
+author:             Yuto Takano
+maintainer:         moa17stock@gmail.com
+copyright:          2024 Yuto Takano
+category:           Finance
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+tested-with:        GHC ==9.4.8
+
+
+source-repository head
+  type:     git
+  location: https://github.com/yutotakano/hledger-auditor
+
+common warnings
+    ghc-options: -Wall
+
+executable hledger-auditor
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.17.2.1
+    hs-source-dirs:   app
+    default-language: GHC2021
